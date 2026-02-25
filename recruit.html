@@ -27,8 +27,9 @@
         }
 
         .recruit-hero {
+            /* ライフスタイルマーケットをイメージした、新鮮な食材が並ぶキッチンの画像に修正 */
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2000&auto=format&fit=crop');
+                        url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -68,6 +69,7 @@
         .nav-link:hover::after {
             width: 100%;
         }
+
     </style>
 </head>
 <body>
@@ -87,10 +89,10 @@
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8 text-xs font-bold text-gray-700 uppercase tracking-[0.2em]">
-                    <a href="index.html#concept" class="nav-link hover:text-amber-600 transition duration-300">Concept</a>
-                    <a href="index.html#items" class="nav-link hover:text-amber-600 transition duration-300">Items</a>
-                    <a href="index.html#producer" class="nav-link hover:text-amber-600 transition duration-300">Producer</a>
-                    <a href="#positions" class="nav-link hover:text-amber-600 transition duration-300">Open Positions</a>
+                    <a href="index.html#concept" class="nav-link">Concept</a>
+                    <a href="index.html#items" class="nav-link">Items</a>
+                    <a href="index.html#producer" class="nav-link">Producer</a>
+                    <a href="#positions" class="nav-link">Open Positions</a>
                     <a href="index.html" class="flex items-center justify-center px-5 py-2 border-2 border-amber-800 text-amber-800 rounded-full hover:bg-amber-800 hover:text-white transition duration-300">Back to Top</a>
                 </div>
             </div>
@@ -110,18 +112,24 @@
     </section>
 
     <!-- Message Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-serif text-amber-900 mb-10 leading-relaxed">
-                「おいしい」の背景にある<br>物語を伝える。
-            </h2>
-            <div class="space-y-6 text-gray-600 text-base leading-loose text-left">
-                <p>
-                    Everyday's Marketが大切にしているのは「好奇心」です。なぜこの野菜は甘いのか、なぜこの器は手に馴染むのか。商品が持つストーリーに共感し、それを自分の言葉でお客様に伝えられる。そんなコミュニケーションを私たちは何よりも重視しています。
-                </p>
-                <p>
-                    マニュアル通りの接客ではなく、あなた自身の感性や発見を大切にしてほしい。食や暮らしを愛するあなたと一緒に、これからの「豊かな市場」を作っていけることを楽しみにしています。
-                </p>
+    <section class="py-20 bg-white text-center">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center text-left">
+                <div class="space-y-6">
+                    <h2 class="text-2xl md:text-3xl font-serif text-amber-900 leading-relaxed">
+                        「おいしい」の背景にある<br>物語を伝える。
+                    </h2>
+                    <p class="text-gray-600 leading-loose">
+                        Everyday's Marketが大切にしているのは「好奇心」です。なぜこの野菜は甘いのか、なぜこの器は手に馴染むのか。商品が持つストーリーに共感し、それを自分の言葉でお客様に伝えられる。そんなコミュニケーションを私たちは何よりも重視しています。
+                    </p>
+                    <p class="text-gray-600 leading-loose">
+                        マニュアル通りの接客ではなく、あなた自身の感性や発見を大切にしてほしい。食や暮らしを愛するあなたと一緒に、これからの「豊かな市場」を作っていけることを楽しみにしています。
+                    </p>
+                </div>
+                <!-- 活気あるマーケットの様子をイメージした画像 -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?q=80&w=1000&auto=format&fit=crop" alt="Market view" class="rounded-2xl shadow-xl">
+                </div>
             </div>
         </div>
     </section>
@@ -160,11 +168,9 @@
                             <p>食や雑貨に興味がある方。お客様との会話を楽しめる方。チームワークを大切にし、自ら考えて行動できる方。</p>
                         </div>
                     </div>
-                    <button class="w-full md:w-auto px-8 py-3 bg-stone-800 text-white font-bold rounded-lg hover:bg-amber-700 transition duration-300">
-                        <a href="entry.html" class="w-full md:w-auto px-8 py-3 bg-stone-800 text-white font-bold rounded-lg hover:bg-amber-700 transition duration-300 text-center">
-    この職種にエントリーする
-</a>
-                    </button>
+                    <a href="entry.html" class="inline-block w-full md:w-auto px-8 py-3 bg-stone-800 text-white font-bold rounded-lg hover:bg-amber-700 transition duration-300 text-center">
+                        この職種にエントリーする
+                    </a>
                 </div>
 
                 <!-- Buyer -->
@@ -192,11 +198,9 @@
                             <p>市場のトレンドに敏感な方。交渉力があり、生産者の想いを大切にできる方。普通自動車免許必須。</p>
                         </div>
                     </div>
-                    <button class="w-full md:w-auto px-8 py-3 bg-stone-800 text-white font-bold rounded-lg hover:bg-amber-700 transition duration-300">
-                        <a href="entry.html" class="w-full md:w-auto px-8 py-3 bg-stone-800 text-white font-bold rounded-lg hover:bg-amber-700 transition duration-300 text-center">
-    この職種にエントリーする
-</a>
-                    </button>
+                    <a href="entry.html" class="inline-block w-full md:w-auto px-8 py-3 bg-stone-800 text-white font-bold rounded-lg hover:bg-amber-700 transition duration-300 text-center">
+                        この職種にエントリーする
+                    </a>
                 </div>
             </div>
         </div>

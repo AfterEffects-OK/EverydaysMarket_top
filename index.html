@@ -79,6 +79,24 @@
             font-weight: bold;
             letter-spacing: 0.05em;
         }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--brand-primary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
@@ -99,11 +117,11 @@
                 </div>
                 <!-- 修正箇所：items-centerを追加して垂直中央揃えを確実にしました -->
                 <div class="hidden md:flex items-center space-x-10 text-xs font-bold text-gray-700 uppercase tracking-[0.2em]">
-                    <a href="#concept" class="hover:text-amber-600 transition duration-300">Concept</a>
-                    <a href="#items" class="hover:text-amber-600 transition duration-300">Items</a>
-                    <a href="#producer" class="hover:text-amber-600 transition duration-300">Producer</a>
-                    <a href="#company" class="hover:text-amber-600 transition duration-300">Company</a>
-                    <a href="#access" class="hover:text-amber-600 transition duration-300">Access</a>
+                    <a href="#concept" class="nav-link hover:text-amber-600 transition duration-300">Concept</a>
+                    <a href="#items" class="nav-link hover:text-amber-600 transition duration-300">Items</a>
+                    <a href="#producer" class="nav-link hover:text-amber-600 transition duration-300">Producer</a>
+                    <a href="#company" class="nav-link hover:text-amber-600 transition duration-300">Company</a>
+                    <a href="#access" class="nav-link hover:text-amber-600 transition duration-300">Access</a>
                     <!-- Recruitボタンも周囲と揃うように調整 -->
                     <a href="recruit.html" class="flex items-center justify-center px-5 py-2 border-2 border-amber-600 text-amber-600 rounded-full hover:bg-amber-600 hover:text-white transition duration-300">Recruit</a>
                 </div>
