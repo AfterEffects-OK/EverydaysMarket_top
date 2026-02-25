@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday's Market | 食卓に驚きを、暮らしに彩りを。</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&display=swap');
+        
+        :root {
+            --brand-primary: #d97706;
+            --brand-dark: #78350f;
+            --bg-stone: #fafaf9;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-stone);
+            color: #444;
+            scroll-behavior: smooth;
+        }
+
+        .font-serif {
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--brand-primary);
+            margin: 0.75rem auto;
+        }
+
+        .img-container {
+            background-color: #f5f5f4;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .img-container:hover img {
+            transform: scale(1.08);
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dummy-notice {
+            background-color: #fef3c7;
+            color: #92400e;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dummy Site Notice -->
+    <div class="dummy-notice">
+        【注意】このウェブサイトは講義用のサンプル（ダミー）です。実在の店舗・サービスとは一切関係ありません。
+    </div>
+
+    <!-- Header Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="text-2xl font-bold text-amber-800 font-serif tracking-tighter italic leading-none">
+                        Everyday's <span class="text-amber-600">Market</span>
+                    </div>
+                </div>
+                <!-- 修正箇所：items-centerを追加して垂直中央揃えを確実にしました -->
+                <div class="hidden md:flex items-center space-x-10 text-xs font-bold text-gray-700 uppercase tracking-[0.2em]">
+                    <a href="#concept" class="hover:text-amber-600 transition duration-300">Concept</a>
+                    <a href="#items" class="hover:text-amber-600 transition duration-300">Items</a>
+                    <a href="#producer" class="hover:text-amber-600 transition duration-300">Producer</a>
+                    <a href="#company" class="hover:text-amber-600 transition duration-300">Company</a>
+                    <a href="#access" class="hover:text-amber-600 transition duration-300">Access</a>
+                    <!-- Recruitボタンも周囲と揃うように調整 -->
+                    <a href="#recruit" class="flex items-center justify-center px-5 py-2 border-2 border-amber-600 text-amber-600 rounded-full hover:bg-amber-600 hover:text-white transition duration-300">Recruit</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-[80vh] flex items-center justify-center text-center text-white px-4">
+        <div class="fade-in-up">
+            <span class="inline-block px-4 py-1 border border-white/40 rounded-full text-xs tracking-widest mb-6 uppercase">Est. 2010 Yokohama</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-serif tracking-tight leading-tight">食卓に驚きを<br>暮らしに彩りを</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto font-light opacity-90 leading-relaxed mb-8">
+                エブリデイズ・マーケットは<br class="hidden md:block">地元の新鮮な食材と 世界中から集めた心躍る雑貨が並ぶ<br class="hidden md:block">ライフスタイル提案型ミニスーパーです
+            </p>
+            <a href="#concept" class="inline-block p-4 border-b-2 border-white/60 hover:border-white transition-all text-sm tracking-[0.3em] font-bold">DISCOVER MORE</a>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=1000&auto=format&fit=crop" alt="店内の様子">
+                </div>
+                <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-amber-50 rounded-full -z-10"></div>
+            </div>
+            <div class="lg:pl-8">
+                <span class="text-amber-600 font-bold tracking-widest text-sm uppercase mb-4 block">Our Concept</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-serif text-amber-900 mb-8 leading-tight">ただの「買い物」を<br>心躍る「体験」へ</h2>
+                <p class="text-gray-600 text-lg leading-loose mb-8">
+                    朝採れの野菜の香りに、遠い国から届いた美しい手仕事の器。私たちは、スペックや価格だけでは語れない「物語」のあるものだけを選んでいます。<br><br>
+                    夕食のメニューに迷った時、誰かへの贈り物を探している時。扉を開ければ、そこには新しい発見と、生産者の情熱が詰まった最高の品々が待っています。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Item Showcase -->
+    <section id="items" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <span class="text-amber-600 font-bold tracking-widest text-xs uppercase mb-2 block">Our Selection</span>
+            <h2 class="text-3xl font-bold section-title font-serif text-amber-900">Featured Items</h2>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="group">
+                <div class="h-80 img-container rounded-2xl mb-6 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop" alt="朝採れ鎌倉野菜セット（バスケット）">
+                </div>
+                <div class="text-center">
+                    <span class="text-[10px] text-stone-400 tracking-widest uppercase mb-1 block">Fresh Produce</span>
+                    <h3 class="font-bold text-gray-800 mb-1">朝採れ鎌倉野菜セット</h3>
+                    <p class="text-amber-700 font-bold">1,580円 <span class="text-[10px] text-stone-400 font-normal">(税込)</span></p>
+                </div>
+            </div>
+            <!-- 変更箇所：全粒粉カンパーニュ -->
+            <div class="group">
+                <div class="h-80 img-container rounded-2xl mb-6 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=800&auto=format&fit=crop" alt="全粒粉カンパーニュ">
+                </div>
+                <div class="text-center">
+                    <span class="text-[10px] text-stone-400 tracking-widest uppercase mb-1 block">Deli & Bakery</span>
+                    <h3 class="font-bold text-gray-800 mb-1">自家製全粒粉カンパーニュ</h3>
+                    <p class="text-amber-700 font-bold">480円 <span class="text-[10px] text-stone-400 font-normal">(税込)</span></p>
+                </div>
+            </div>
+            <div class="group">
+                <div class="h-80 img-container rounded-2xl mb-6 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=600&auto=format&fit=crop" alt="北欧セラミックボウル">
+                </div>
+                <div class="text-center">
+                    <span class="text-[10px] text-stone-400 tracking-widest uppercase mb-1 block">Living & Goods</span>
+                    <h3 class="font-bold text-gray-800 mb-1">北欧セラミックボウル</h3>
+                    <p class="text-amber-700 font-bold">1,800円 <span class="text-[10px] text-stone-400 font-normal">(税込)</span></p>
+                </div>
+            </div>
+            <div class="group">
+                <div class="h-80 img-container rounded-2xl mb-6 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=600&auto=format&fit=crop" alt="Minato IPA">
+                </div>
+                <div class="text-center">
+                    <span class="text-[10px] text-stone-400 tracking-widest uppercase mb-1 block">Beverage</span>
+                    <h3 class="font-bold text-gray-800 mb-1">Minato IPA</h3>
+                    <p class="text-amber-700 font-bold">650円 <span class="text-[10px] text-stone-400 font-normal">(税込)</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Producer Story -->
+    <section id="producer" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <span class="text-amber-600 font-bold tracking-widest text-sm uppercase mb-4 block">Our Partner</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-serif text-amber-900 mb-8 leading-tight">三浦農園、土と対話する日々</h2>
+                <p class="text-gray-600 text-lg leading-loose mb-6 italic">
+                    「自分の子どもに食べさせられないものは、絶対に出さない。それが私たちの誇りです。」
+                </p>
+                <p class="text-gray-600 text-lg leading-loose">
+                    鎌倉の潮風を感じる丘の上で、三浦さんは30年以上、農薬を極限まで抑えた循環型農業を続けています。毎朝、霧が晴れる前に収穫された野菜は、その日のうちに私たちの店頭に並びます。土の力強さを感じる、濃い味わいをぜひお試しください。
+                </p>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="三浦農園の風景">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profile Section -->
+    <section id="company" class="py-24 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-bold tracking-widest text-xs uppercase mb-2 block">Our Profile</span>
+                <h2 class="text-3xl font-bold section-title font-serif text-amber-900">Company Profile</h2>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <tbody class="divide-y divide-stone-100">
+                        <tr>
+                            <th class="py-6 px-8 bg-stone-50 w-1/3 text-stone-500 font-bold text-sm uppercase tracking-wider">会社名</th>
+                            <td class="py-6 px-8 text-gray-700">株式会社エブリデイズ・マーケット</td>
+                        </tr>
+                        <tr>
+                            <th class="py-6 px-8 bg-stone-50 w-1/3 text-stone-500 font-bold text-sm uppercase tracking-wider">設立</th>
+                            <td class="py-6 px-8 text-gray-700">2010年4月1日</td>
+                        </tr>
+                        <tr>
+                            <th class="py-6 px-8 bg-stone-50 w-1/3 text-stone-500 font-bold text-sm uppercase tracking-wider">資本金</th>
+                            <td class="py-6 px-8 text-gray-700">1,000万円</td>
+                        </tr>
+                        <tr>
+                            <th class="py-6 px-8 bg-stone-50 w-1/3 text-stone-500 font-bold text-sm uppercase tracking-wider">所在地</th>
+                            <td class="py-6 px-8 text-gray-700">〒231-0861 神奈川県横浜市中区元町 1-2-3</td>
+                        </tr>
+                        <tr>
+                            <th class="py-6 px-8 bg-stone-50 w-1/3 text-stone-500 font-bold text-sm uppercase tracking-wider">事業内容</th>
+                            <td class="py-6 px-8 text-gray-700">生鮮食品・輸入雑貨の小売販売、オリジナル惣菜の製造販売、カフェ運営</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access & Location -->
+    <section id="access" class="py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-12 rounded-2xl shadow-sm">
+                    <h2 class="text-3xl font-bold font-serif text-amber-900 mb-8">Store Information</h2>
+                    <div class="space-y-6 text-gray-600">
+                        <div>
+                            <h4 class="font-bold text-amber-800 mb-1 uppercase tracking-wider text-xs">Address</h4>
+                            <p>神奈川県横浜市中区元町 1-2-3<br>エブリデイズ元町ビル 1F</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800 mb-1 uppercase tracking-wider text-xs">Open</h4>
+                            <p>10:00 - 20:00 (水曜定休)</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800 mb-1 uppercase tracking-wider text-xs">Contact</h4>
+                            <p>045-123-4567<br>hello@everydays-market.jp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-sm bg-stone-300 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-stone-500 font-bold uppercase tracking-widest bg-stone-200">
+                        Map Placeholder
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruit Banner -->
+    <section id="recruit" class="py-20 bg-amber-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-serif mb-6 italic">Join Our Community</h2>
+            <p class="text-lg opacity-90 mb-10 max-w-2xl mx-auto">
+                私たちは、食の未来を共に作り上げる仲間を探しています。店舗スタッフ、<br class="hidden md:block">バイヤー、配送ドライバー。あなたの情熱をここで活かしませんか？
+            </p>
+            <a href="#" class="inline-block px-10 py-4 bg-white text-amber-900 font-bold rounded-full hover:bg-stone-100 transition duration-300 shadow-xl">
+                採用情報を見る
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
+                <div>
+                    <div class="text-2xl font-bold text-amber-600 font-serif mb-6 tracking-tighter italic">
+                        Everyday's <span class="text-white">Market</span>
+                    </div>
+                    <p class="text-stone-400 text-sm leading-loose">
+                        食卓に驚きを 暮らしに彩りを<br>
+                        横浜元町から 豊かなライフスタイルを提案します
+                    </p>
+                    <div class="mt-4 p-3 border border-stone-700 text-xs text-stone-500 italic">
+                        ※このサイトは講義・演習用のダミーサイトであり、実在の団体とは関係ありません。
+                    </div>
+                </div>
+                <div class="space-y-2 text-stone-400 text-sm">
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Menu</h4>
+                    <p><a href="#concept" class="hover:text-amber-500 transition">Concept</a></p>
+                    <p><a href="#items" class="hover:text-amber-500 transition">Featured Items</a></p>
+                    <p><a href="#producer" class="hover:text-amber-500 transition">Partners</a></p>
+                    <p><a href="#company" class="hover:text-amber-500 transition">Company Profile</a></p>
+                </div>
+                <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+                    <a href="#" class="hover:text-amber-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-amber-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-amber-500 transition"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 text-center">
+                <p class="text-stone-500 text-[10px] tracking-widest uppercase">
+                    &copy; 2024 Everyday's Market Co., Ltd. / Case Study Project for Web Design Course.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
