@@ -96,6 +96,31 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        /* マップコンテナのサイズ調整 */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 450px; /* PCでの高さを450pxに設定 */
+            border-radius: 1.5rem; /* 角丸を他の要素と合わせる */
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* スマホでは少し高さを抑える調整 */
+        @media (max-width: 640px) {
+            .map-container {
+                height: 300px;
+            }
+        }
 
     </style>
 </head>
@@ -269,36 +294,55 @@
         </div>
     </section>
 
-    <!-- Access & Location -->
-    <section id="access" class="py-24 bg-stone-100">
+    <!-- Access Section -->
+    <section id="access" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-white p-12 rounded-2xl shadow-sm">
-                    <h2 class="text-3xl font-bold font-serif text-amber-900 mb-8">Store Information</h2>
-                    <div class="space-y-6 text-gray-600">
-                        <div>
-                            <h4 class="font-bold text-amber-800 mb-1 uppercase tracking-wider text-xs">Address</h4>
-                            <p>神奈川県横浜市中区元町 1-2-3<br>エブリデイズ元町ビル 1F</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-amber-800 mb-1 uppercase tracking-wider text-xs">Open</h4>
-                            <p>10:00 - 20:00 (水曜定休)</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-amber-800 mb-1 uppercase tracking-wider text-xs">Contact</h4>
-                            <p>045-123-4567<br>hello@everydays-market.jp</p>
-                        </div>
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-bold tracking-widest text-xs uppercase mb-2 block">Visit Us</span>
+                <h2 class="text-3xl font-bold section-title font-serif text-amber-900">アクセス</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <div class="map-container">
+                        <!-- Google Maps Embed -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.414327297834!2d139.6455138763595!3d35.43213504354228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185cf1a97a3713%3A0xc0747443834a347!2z44CSMjMxLTA4NjEg56We5aWI5bed55yM5qiq5rWc5biC5Lit5Yy65YWD55S6!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-sm bg-stone-300 relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-stone-500 font-bold uppercase tracking-widest bg-stone-200">
-                        Map Placeholder
+                <div class="space-y-8 bg-stone-50 p-10 rounded-3xl border border-stone-100">
+                    <div>
+                        <h4 class="text-amber-800 font-bold mb-2 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Address
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            〒231-0861<br>
+                            神奈川県横浜市中区元町 1-2-3<br>
+                            Everyday's Building 1F
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-amber-800 font-bold mb-2 flex items-center">
+                            <i class="fas fa-clock mr-2"></i> Opening Hours
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            平日・土曜: 10:00 - 20:00<br>
+                            日曜・祝日: 10:00 - 19:00<br>
+                            <span class="text-stone-400 text-xs italic">※定休日: 毎週水曜日</span>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-amber-800 font-bold mb-2 flex items-center">
+                            <i class="fas fa-subway mr-2"></i> Train
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed text-sm">
+                            みなとみらい線「元町・中華街駅」5番出口より徒歩3分<br>
+                            JR根岸線「石川町駅」元町口より徒歩8分
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Recruit Banner -->
     <section id="recruit" class="py-20 bg-amber-700 text-white">
         <div class="max-w-7xl mx-auto px-4 text-center">
