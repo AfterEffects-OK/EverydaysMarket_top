@@ -6,53 +6,9 @@
     <title>Entry | Everyday's Market</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-        
-        :root {
-            --brand-primary: #d97706;
-            --brand-dark: #78350f;
-            --bg-stone: #fafaf9;
-        }
-
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--bg-stone);
-            color: #444;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .font-serif {
-            font-family: 'Shippori Mincho', serif;
-        }
-
-        .notice-card {
-            background: white;
-            border-radius: 2rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--brand-primary);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-stone-50">
+<body class="bg-stone-50 flex flex-col min-h-screen">
 
     <!-- Header -->
     <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-stone-100">
