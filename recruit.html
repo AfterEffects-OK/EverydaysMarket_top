@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recruit | Everyday's Market - 共に食卓の未来を作る仲間を募集しています</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +32,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-amber-800 font-serif tracking-tighter italic leading-none">
+                    <a href="index.html" class="text-2xl font-bold text-amber-800 font-serif tracking-wide italic leading-none scale-x-105 inline-block origin-left">
                         Everyday's <span class="text-amber-600">Market</span>
                     </a>
                 </div>
@@ -55,7 +67,7 @@
     <section class="recruit-hero h-[50vh] flex items-center justify-center text-center text-white px-4">
         <div>
             <span class="inline-block px-4 py-1 border border-white/40 rounded-full text-xs tracking-[0.3em] mb-4 uppercase">Careers</span>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 font-serif tracking-tight">感性を仕事にする。</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 font-serif tracking-widest">感性を仕事にする。</h1>
             <p class="text-base md:text-lg max-w-2xl mx-auto font-light opacity-90 leading-relaxed">
                 単にモノを売るのではなく、その先にある豊かな時間を届ける。<br>
                 そんな私たちのチームに、新しい風を吹き込んでくれる仲間を待っています。
@@ -200,7 +212,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
                 <div>
                     <!-- ロゴを a タグで囲み、トップページへのリンクを設定 -->
-                    <a href="index.html" class="inline-block text-2xl font-bold text-amber-600 font-serif mb-6 tracking-tighter italic hover:opacity-80 transition-opacity">
+                    <a href="index.html" class="inline-block text-2xl font-bold text-amber-600 font-serif mb-6 tracking-wide italic hover:opacity-80 transition-opacity scale-x-105 origin-left">
                         Everyday's <span class="text-white">Market</span>
                     </a>
                     <p class="text-stone-400 text-sm leading-loose">
